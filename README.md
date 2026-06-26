@@ -140,29 +140,27 @@ http://127.0.0.1:8000/docs
 
 ## Approach
 
-The application is divided into separate layers.
+The application is divided into separate layers :
+  - Router: handles HTTP requests.
+  - Service: contains business logic.
+  - Repository : performs database operations.
+  - Models : define database tables.
+  - Myntra Service :handles web scraping.
+    
 
--Router: handles HTTP requests.
--Service: contains business logic.
--Repository : performs database operations.
--Models : define database tables.
--Myntra Service :handles web scraping.
-
-
-## Assumptions
-
--Product IDs provided in the CSV are valid Myntra product IDs.
--Product information is available on public product pages.
+## Assumptions:
+ - Product IDs provided in the CSV are valid Myntra product IDs.
+ - Product information is available on public product pages.
+   
 
 ## Error Handling
 
 The application handles:
-
--Invalid CSV files
--uplicate product IDs
--Duplicate categories
--Missing product data
--HTTP request failures
+ - Invalid CSV files
+ - uplicate product IDs
+ - Duplicate categories
+ - Missing product data
+ - HTTP request failures
 
 
 ## Future Improvements
