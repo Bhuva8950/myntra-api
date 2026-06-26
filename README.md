@@ -32,23 +32,6 @@ The application follows a simple layered architecture using Routers, Services, R
 * Uvicorn
 
 
-
-## Project Structure
-
-
-app
-├── api
-├── config
-├── db
-├── models
-├── repositories
-├── schemas
-├── services
-└── main.py
-requirements.txt
-README.md
-
-
 ## Database Design
 
 ### Category
