@@ -15,6 +15,13 @@ class ImportService:
 
     @staticmethod
     def is_valid_product_id(product_id: str) -> bool:
+        '''
+        Check if the product ID is valid.
+        Args:
+            product_id: Product ID
+        Returns:
+            True if the product ID is valid, False otherwise
+        '''
         if not product_id:
             return False
 
@@ -31,6 +38,14 @@ class ImportService:
     @staticmethod
     def import_products(file, db: Session):
 
+        '''
+        Import products from a CSV file.
+        Args:
+            file: CSV file
+            db: SQLAlchemy session
+        Returns:
+            Dictionary containing the import results
+        '''
         content = file.file.read().decode("utf-8")
         csv_reader = csv.DictReader(StringIO(content))
 

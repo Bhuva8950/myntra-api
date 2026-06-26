@@ -4,6 +4,14 @@ from app.models.product import Category, Product
 
 
 class CategoryRepository:
+    '''
+    Repository for Category model.
+    Args:
+        db: SQLAlchemy session
+        name: Category name
+    Returns:
+        Category object
+    '''
 
     @staticmethod
     def get_by_name(db: Session, name: str):
@@ -28,6 +36,14 @@ class CategoryRepository:
 
 
 class ProductRepository:
+    '''
+    Repository for Product model.
+    Args:
+        db: SQLAlchemy session
+        product_id: Product ID
+    Returns:
+        Product object
+    '''
 
     @staticmethod
     def get_by_product_id(

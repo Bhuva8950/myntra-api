@@ -15,6 +15,13 @@ class MyntraService:
 
     @staticmethod
     def get_product_details(product_id: str):
+        '''
+        Get product details from Myntra.
+        Args:
+            product_id: Product ID
+        Returns:
+            Dictionary containing the product details
+        '''
 
         url = f"{MYNTRA_BASE_URL}/{product_id}"
 
@@ -86,6 +93,13 @@ class MyntraService:
 
     @staticmethod
     def get_sponsored_products(category: str):
+        '''
+        Get sponsored products from Myntra.
+        Args:
+            category: Category name
+        Returns:
+            List of dictionaries containing the sponsored products
+        '''
         url = f"{MYNTRA_BASE_URL}/{category.lower()}"
 
         response = requests.get(

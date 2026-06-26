@@ -10,6 +10,14 @@ class ProductService:
     @staticmethod
     def get_or_create_product(db: Session, product_id: str):
 
+        '''
+        Get or create product from Myntra.
+        Args:
+            db: SQLAlchemy session
+            product_id: Product ID
+        Returns:
+            Dictionary containing the product details
+        '''
         # 1. CHECK DB FIRST
         product = ProductRepository.get_by_product_id(db, product_id)
 
